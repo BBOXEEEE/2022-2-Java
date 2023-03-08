@@ -1,0 +1,9 @@
+package Dog;
+
+public class C {
+	public void baz() {
+		A a = new A();
+		a.bar();
+		a.ham();
+	}
+}

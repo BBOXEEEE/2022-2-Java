@@ -1,0 +1,11 @@
+package Dog;
+
+public class B extends A{
+	public void baz() {
+		bar();
+		ham();
+	}
+	public void bar() {
+		System.out.println("B::bar()");
+	}
+}

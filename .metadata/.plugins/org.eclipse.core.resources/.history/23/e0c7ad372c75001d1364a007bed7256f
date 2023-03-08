@@ -1,0 +1,114 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
+/*
+record Item(long itemNum, String name, int price) {}
+
+class Order implements Cloneable, Comparable<Order>{
+	private long orderNum;
+	private Item[] items;
+	public Order(long orderNum) {
+		this.orderNum=orderNum;
+	}
+	public void setItems(Item... items) {
+		this.items=items;
+	}
+	public int totalPrice() {
+		return Arrays.stream(items).mapToInt(Item::price).sum();
+	}
+	@Override public int compareTo(Order other) {
+		return (int)(orderNum-other.orderNum);
+	}
+	@Override public boolean equals(Object o){
+		if(o==null||getClass()!=o.getClass()) return false;
+		if(this==o) return true;
+		Order od = (Order)o;
+		return orderNum==od.orderNum && Arrays.equals(items, od.items);
+	}
+	@Override public Order clone() throws CloneNotSupportedException{
+		Order cloned = (Order)super.clone();
+		return cloned;
+	}
+}
+class RocketOrder extends Order{
+	private long deliveryNum;
+	public RocketOrder(long orderNum, long deliveryNum) {
+		super(orderNum);
+		this.deliveryNum=deliveryNum;
+	}
+	@Override public int compareTo(Order o) {
+		return 0;
+	}
+	@Override public boolean equals(Object o){
+		if(!super.equals(o)) return false;
+		RocketOrder ro = (RocketOrder)o;
+		return deliveryNum==ro.deliveryNum;
+	}
+	@Override public RocketOrder clone() {
+		RocketOrder cloned = null;
+		try {
+			cloned = (RocketOrder)super.clone();
+		}
+		catch(CloneNotSupportedException e) {}
+		return cloned;
+	}
+}
+public class TestMain {
+	public static void main(String[] args) {
+		Order[] orders = new Order[]{
+			new Order(1), new Order(2), new Order(3), new Order(4)
+		};
+		Item[] item1 = new Item[]{
+			new Item(1, "shoes", 10_000), new Item(2,"clothe", 5_000), new Item(3, "clothes", 5_000)
+		};
+		Item item2 = new Item(2, "clohtes", 5_000);
+		Item item3 = new Item(3, "clohtes", 5_000);
+		Item item4 = new Item(4, "clohtes", 10_000);
+		orders[0].setItems(item1);
+		orders[1].setItems(item2);
+		orders[2].setItems(item3);
+		orders[3].setItems(item4);
+		System.out.println(orders[0].totalPrice());
+		Arrays.sort(orders, Comparator.comparingInt(Order::totalPrice));
+	}
+}*/
+
+public class TestMain{
+	public enum Weapon{
+		Mjolnir(20,5), CapShield(10,5), 
+		StormBreaker(20,10), YakaArrow(15,5);
+		public final int AttackPower;
+		public final int DefensePower;
+		private Weapon(int attackPower, int defensePower) {
+			this.AttackPower = attackPower;
+			this.DefensePower = defensePower;
+		}
+		public boolean hasSpecialAttack() {
+			switch(this) {
+			case Mjolnir: return true;
+			default: return false;
+			}
+		}
+		private static final boolean[] isSpecialAttack
+		 = {true, false, false, false};
+		public boolean hasSpecAttack() {
+			return isSpecialAttack[this.ordinal()];
+		}
+	}
+	public enum CoffeeTopping{
+		ICECREAM{
+			public int cost() { return 700; }
+		}, MILK, SOY, MOCHA, WHIP{
+			public int cost() { return 500; }
+		}
+	}
+	public static void main(String[] args) {
+		Weapon a1 = Weapon.CapShield;
+		System.out.println(Weapon.Mjolnir.hasSpecialAttack());
+		System.out.println(a1.hasSpecialAttack());
+		System.out.println(Weapon.Mjolnir.hasSpecAttack());
+		System.out.println(a1.hasSpecAttack());
+		
+		System.out.println(CoffeeTopping.WHIP.cost());
+	}
+}

@@ -1,0 +1,87 @@
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.IntSummaryStatistics;
+import java.util.List;
+import java.util.Optional;
+import java.util.OptionalInt;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+/**
+ * @copyright 한국기술교육대학교 컴퓨터공학부 자바프로그래밍 14장 예제
+ * @version 2022년도 2학기
+ * @author 김상진
+ * 1) 최종 연산 사용법: sum, max, reduce, count, collect
+ * 2) IntSummaryStatistics
+ */
+public class TerminalOperationTest {
+	public static void sum_test() {
+		int[] iArray = {1,5,3,7,2};
+		int sum = IntStream.of(iArray).sum();
+		System.out.println(sum);
+	}
+	public static void max_test01() {
+		String[] aList = {"monkey", "tiger", "lion", "zebra", "lizard"};
+		Optional<String> largest = 	Stream.of(aList).max(Comparator.comparing(String::length));
+		largest.ifPresent(System.out::println);
+	}
+	public static void max_test02() {
+		String[] aList = {"monkey", "tiger", "lion", "zebra", "elephant", "lizard"};
+		OptionalInt max = Stream.of(aList).mapToInt(String::length).max();
+		max.ifPresent(System.out::println);
+	}
+	public static void reduce_test01() {
+		List<Integer> list = Arrays.asList(1,5,3,7,2);
+		Optional<Integer> optionSum 
+			= list.stream().filter(n->(n&1)==1).reduce(Integer::sum);
+		System.out.println(optionSum.get());
+		int sum = list.stream().filter(n->(n&1)==1).reduce(0, Integer::sum);
+		System.out.println(sum);
+	}
+	// parallelStream의 경우에는 초기값, accumulator, combiner 3가지 인자를 받는 버전을
+	// 사용하는 것이 일반적인 reduce를 사용하는 방법
+	public static void reduce_test02() {
+		List<Integer> list = Arrays.asList(1,5,3,7,2);
+		int sum = list.parallelStream().filter(n->(n&1)==1).reduce(0,Integer::sum,Integer::sum);
+		System.out.println(sum);
+	}
+	
+	public static void count_test() {
+		List<String> list = Arrays.asList("monkey", "zebra", "lion", "tiger", "elephant");
+		long count = list.stream().filter(s->s.length()>4).count(); 
+		System.out.println(count);
+		String word = "aaabceizzzo";
+		count = word.chars().filter(c->"aeiou".indexOf(c)!=-1).count();
+		System.out.println(count);
+		int[] nums = {4, 7, 3, 4, 1};
+		count = IntStream.of(nums).distinct().count();
+		 // long count = Arrays.stream(list).distinct().count();
+		System.out.println(count!=nums.length); 
+	}
+	
+	public static void summarizing_test() {
+		List<Integer> list = Arrays.asList(1,7,3,5,11);
+		IntSummaryStatistics summary = 	
+			list.stream().collect(Collectors.summarizingInt(x->x));
+		System.out.printf("합계: %d, 평균: %.2f, 최대값: %d, 최소값: %d%n", 	
+			summary.getSum(), summary.getAverage(), summary.getMax(), summary.getMin());
+	}
+	
+	public static void joining_test() {
+		List<String> list = Arrays.asList("lion","tiger","zebra","elephant");
+		String result = list.stream().collect(Collectors.joining(", "));
+		System.out.println(result);
+	}
+	
+	public static void main(String[] args) {
+		sum_test();
+		//max_test01();
+		//max_test02();
+		//reduce_test01();
+		//reduce_test02();
+		//summarizing_test();
+		//joining_test();
+	}
+
+}

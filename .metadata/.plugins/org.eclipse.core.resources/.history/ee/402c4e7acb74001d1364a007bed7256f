@@ -1,0 +1,9 @@
+package Cat;
+import Dog.A;
+
+public class D extends A{
+	public void baz() {
+		bar();
+		ham();
+	}
+}

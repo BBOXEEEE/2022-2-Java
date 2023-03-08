@@ -1,0 +1,27 @@
+package Dog;
+
+class A{
+	protected void bar() { System.out.println("A::bar()");}
+	void ham() { System.out.println("A::ham()");}
+}
+class B extends A{
+	public void baz() {
+		bar();
+		ham();
+	}
+}
+class C{
+	public void baz() {
+		A a = new A();
+		a.bar();
+		a.ham();
+	}
+}
+public class test {
+	public static void main(String[] args) {
+		B b = new B();
+		C c = new C();
+		b.baz();
+		c.baz();
+	}
+}

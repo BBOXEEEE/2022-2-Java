@@ -1,0 +1,11 @@
+package Cat;
+import Dog.*;
+
+public class test {
+	public static void main(String[] args) {
+		D d = new D();
+		E e = new E();
+		d.baz();
+		e.baz(d, d);
+	}
+}

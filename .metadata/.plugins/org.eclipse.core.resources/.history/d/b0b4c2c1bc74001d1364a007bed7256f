@@ -1,0 +1,43 @@
+import java.util.Arrays;
+
+record Item(long itemNum, String name, int price) {}
+
+abstract class Order implements Cloneable, Comparable<Order>{
+	private long orderNum;
+	private Item[] items;
+	public Order(long orderNum) {
+		this.orderNum=orderNum;
+	}
+	public void setItems(Item... items) {
+		this.items=items;
+	}
+	public int totalPrice() {
+		return 0;
+	}
+	@Override public int compareTo(Order other) {
+		return (int)(orderNum-other.orderNum);
+	}
+	@Override public boolean equals(Object o){
+		if(o==null||getClass()!=o.getClass()) return false;
+		if(this==o) return true;
+		Order od = (Order)o;
+		return orderNum==od.orderNum && Arrays.equals(items, od.items);
+	}
+}
+class RocketOrder extends Order{
+	private long deliveryNum;
+	public RocketOrder(long orderNum, long deliveryNum) {
+		super(orderNum);
+		this.deliveryNum=deliveryNum;
+	}
+	@Override public boolean equals(Object o){
+		if(!super.equals(o)) return false;
+		RocketOrder ro = (RocketOrder)o;
+		return deliveryNum==ro.deliveryNum;
+	}
+}
+public class TestMain {
+	public static void main(String[] args) {
+		
+	}
+}

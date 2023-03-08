@@ -1,0 +1,6 @@
+package Dog;
+
+public class A {
+	protected void bar() { System.out.println("A::bar()");}
+	void ham() { System.out.println("A::ham()");}
+}

@@ -1,0 +1,10 @@
+package Cat;
+import Dog.*;
+
+public class E{
+	public void baz(A a, D d) {
+	}
+	public void foo(B b) {
+		b.bar();
+	}
+}

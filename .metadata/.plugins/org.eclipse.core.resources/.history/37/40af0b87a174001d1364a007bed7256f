@@ -1,0 +1,36 @@
+
+public class TestMain {
+	public enum Month{
+		JAN, FEB, MAR, APR, MAY, JUN,
+		JUL, AUG, SEP, OCT, NOV, DEC;
+		public Month next(int n){
+			int index = (this.ordinal()+n) % 12;
+			if(index<0&&index>11) throw new IllegalArgumentException();
+			return values()[index];
+		}
+
+		public Month prev(int n){
+			int index = (this.ordinal()-n) % 12;
+			if(index<0&&index>11) throw new IllegalArgumentException();
+			return values()[index];
+		}
+		
+		public int getNumberOfDays(int year) {
+			
+			Month month = this;
+			switch(month) {
+			case APR,JUN,SEP,NOV: return 30;
+			case FEB:
+				if((year%4==0)&&(year%100!=0)||(year%400==0))
+					return 29;
+				else return 28;
+			default: return 31;
+			}
+		}
+	}
+	public static void main(String[] args) {
+		Month curr = Month.FEB;
+		System.out.println(curr.prev(1));
+		System.out.println(curr.getNumberOfDays(2012));
+	}
+}

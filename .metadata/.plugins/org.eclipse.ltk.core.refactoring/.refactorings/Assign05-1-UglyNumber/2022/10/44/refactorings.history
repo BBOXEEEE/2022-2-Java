@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;AgglyNumber&apos; to &apos;UglyNumber&apos;&#x0A;- Original project: &apos;Assign05-1-UglyNumber&apos;&#x0A;- Original element: &apos;AgglyNumber&apos;&#x0A;- Renamed element: &apos;UglyNumber&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;AgglyNumber&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{AgglyNumber.java[AgglyNumber" matchStrategy="1" name="UglyNumber" qualified="false" references="true" similarDeclarations="false" stamp="1666683219764" textual="false" version="1.0"/>
+</session>

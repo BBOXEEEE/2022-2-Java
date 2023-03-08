@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/chap13.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/chap14.zip"/>
+			<item value="/Users/sehyeon/Downloads/chap12-Vehicle-Hwk.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/chap12.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/chap11.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/chap10.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/chap09.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/chap08.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/JavaFX/실습자료/Tetris2022-Student02.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/JavaFX/Tetris2022-Student01.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/chap07.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/chap06.zip"/>
+			<item value="/Users/sehyeon/Downloads/Assign04-Hwk-Dog.zip"/>
+			<item value="/Users/sehyeon/Downloads/Assign04-Hwk-Soldier.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/chap05.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/chap04.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/chap03.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/chap02.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/chap01.zip"/>
+			<item value="/Users/sehyeon/Desktop/SEHYEON/2022-2학기/JAVA 프로그래밍/실습자료/JAVAFX-TEST.zip"/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.ui.wizards.new.project"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+		</list>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="427"/>
+		<item key="DIALOG_Y_ORIGIN" value="177"/>
+		<item key="DIALOG_WIDTH" value="586"/>
+		<item key="DIALOG_HEIGHT" value="521"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+</section>

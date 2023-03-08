@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;InsufficentFundException&apos; to &apos;InsufficientFundException&apos;&#x0A;- Original project: &apos;Pract01-BankAccount&apos;&#x0A;- Original element: &apos;InsufficentFundException&apos;&#x0A;- Renamed element: &apos;InsufficientFundException&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;InsufficentFundException&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{InsufficentFundException.java[InsufficentFundException" matchStrategy="1" name="InsufficientFundException" qualified="false" references="true" similarDeclarations="false" stamp="1665019846762" textual="false" version="1.0"/>
+</session>
